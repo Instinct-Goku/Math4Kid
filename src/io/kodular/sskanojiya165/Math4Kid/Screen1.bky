@@ -1,0 +1,197 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="-nF+%;|w7=ef!9SktfcF" x="-1170" y="-50">
+    <mutation component_type="Form" is_generic="false" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_method" id="Rf;yKntV(-2F2$Z%Z|=)">
+        <mutation component_type="AsyncProc" method_name="CallAfterDelay" is_generic="false" instance_name="AsyncProc1"></mutation>
+        <field name="COMPONENT_SELECTOR">AsyncProc1</field>
+        <value name="ARG0">
+          <block type="math_number" id="`%=G@.;dB|X|G-W,kSh*">
+            <field name="NUM">2500</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="JhiPkQ8?^*Qyl,.W6MhU">
+            <field name="TEXT">init</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="9gk^$d%cM%lY1LCeGoxl" x="310" y="90">
+    <mutation component_type="Button" is_generic="false" instance_name="counting" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">counting</field>
+    <statement name="DO">
+      <block type="component_method" id="1krB#7ReD{~#@=n*--x@">
+        <mutation component_type="Sound" method_name="Play" is_generic="false" instance_name="click"></mutation>
+        <field name="COMPONENT_SELECTOR">click</field>
+        <next>
+          <block type="component_method" id="bD+0$z/AQYr|0#mL1QPu">
+            <mutation component_type="Player" method_name="Stop" is_generic="false" instance_name="Player1"></mutation>
+            <field name="COMPONENT_SELECTOR">Player1</field>
+            <next>
+              <block type="controls_if" id="A(~,CG$UE%)U4Ft@idIM">
+                <value name="IF0">
+                  <block type="logic_boolean" id="!q#7Jc2dQhH^,hP-oW?[">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_openAnotherScreen" id="yeU$U|Q|31No!oY%36|H">
+                    <value name="SCREEN">
+                      <block type="text" id="T5C[+MG~G;VliPbI(Oc,">
+                        <field name="TEXT">counting</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id=".`p;d@]]4J$a{tF[wSYX" x="-1150" y="190">
+    <field name="NAME">init</field>
+    <statement name="STACK">
+      <block type="controls_if" id="Q-[N$R;/v-3cb`O,.8Uz">
+        <value name="IF0">
+          <block type="component_set_get" id="a((_DHhsG_wS$u%AdIN/">
+            <mutation component_type="Player" set_or_get="get" property_name="IsPlaying" is_generic="false" instance_name="Player1"></mutation>
+            <field name="COMPONENT_SELECTOR">Player1</field>
+            <field name="PROP">IsPlaying</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id=";;z2H+?d[dG/u3S#r^04">
+            <mutation component_type="Player" method_name="Stop" is_generic="false" instance_name="Player1"></mutation>
+            <field name="COMPONENT_SELECTOR">Player1</field>
+          </block>
+        </statement>
+        <next>
+          <block type="component_method" id="zR-n9cCskapoz|H7d:Wo">
+            <mutation component_type="Player" method_name="Start" is_generic="false" instance_name="Player1"></mutation>
+            <field name="COMPONENT_SELECTOR">Player1</field>
+            <next>
+              <block type="component_set_get" id="a|G6/{7b{fTKp9YG=@s|">
+                <mutation component_type="Form" set_or_get="set" property_name="BackgroundImage" is_generic="false" instance_name="Screen1"></mutation>
+                <field name="COMPONENT_SELECTOR">Screen1</field>
+                <field name="PROP">BackgroundImage</field>
+                <value name="VALUE">
+                  <block type="text" id="x*czaM`Ic]5QGud+)@92">
+                    <field name="TEXT">BG-min.png</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="YV:00JVtB{$;)4T!=b7=">
+                    <mutation component_type="Image" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Image1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Image1</field>
+                    <field name="PROP">Visible</field>
+                    <value name="VALUE">
+                      <block type="logic_false" id=".JN1g{0e!c;-@U]R%e]q">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="V0P},K}{orU8VLG3-UZe">
+                        <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Vertical_Arrangement1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="S@%5}BPbz2MN1EoUL)G5">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="2~5Jus,L_NL*(/t9E22E" x="-150" y="210">
+    <mutation component_type="Button" is_generic="false" instance_name="addition" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">addition</field>
+    <statement name="DO">
+      <block type="component_method" id="LeIs).zKp97Ad3V-k|6E">
+        <mutation component_type="Sound" method_name="Play" is_generic="false" instance_name="click"></mutation>
+        <field name="COMPONENT_SELECTOR">click</field>
+        <next>
+          <block type="component_method" id="c`Df{YUZ0-+_,M=4GVSP">
+            <mutation component_type="Player" method_name="Stop" is_generic="false" instance_name="Player1"></mutation>
+            <field name="COMPONENT_SELECTOR">Player1</field>
+            <next>
+              <block type="controls_if" id="CyL$S{{c%Yqa3AbNWn2B">
+                <value name="IF0">
+                  <block type="logic_boolean" id="qkUau,1o!J*:a/h90@pg">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_openAnotherScreenWithStartValue" id="m.Y$,q1AV|8QLXxC)])i">
+                    <value name="SCREENNAME">
+                      <block type="text" id="j+Ez2Rs]9!$[$-]*5UWR">
+                        <field name="TEXT">addition</field>
+                      </block>
+                    </value>
+                    <value name="STARTVALUE">
+                      <block type="text" id="LeTPZxA99{SL?d|8~$UN">
+                        <field name="TEXT">addition</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="xFU:tP]0+r1_h~O(lZXZ" x="90" y="490">
+    <mutation component_type="Button" is_generic="false" instance_name="subtraction" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">subtraction</field>
+    <statement name="DO">
+      <block type="component_method" id="[TU2V(Uq3ICkr`*qAM[M">
+        <mutation component_type="Sound" method_name="Play" is_generic="false" instance_name="click"></mutation>
+        <field name="COMPONENT_SELECTOR">click</field>
+        <next>
+          <block type="component_method" id="@RQ0b:`d+[LC2]KcpFNA">
+            <mutation component_type="Player" method_name="Stop" is_generic="false" instance_name="Player1"></mutation>
+            <field name="COMPONENT_SELECTOR">Player1</field>
+            <next>
+              <block type="controls_if" id="j*,uyM3Uzu6CoE8pb}Nj">
+                <value name="IF0">
+                  <block type="logic_boolean" id="cBo98.E|1o,Y!$5Y.?~6">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_openAnotherScreenWithStartValue" id="ZkL5Rzj+N@gB^HVxfSOq">
+                    <value name="SCREENNAME">
+                      <block type="text" id="u934?EtkRrl^yjWh`E`/">
+                        <field name="TEXT">addition</field>
+                      </block>
+                    </value>
+                    <value name="STARTVALUE">
+                      <block type="text" id="=PwzdGDS04fRD96f)sUM">
+                        <field name="TEXT">subtraction</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="230" language-version="32"></yacodeblocks>
+</xml>
